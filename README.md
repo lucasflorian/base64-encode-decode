@@ -1,6 +1,6 @@
 # base64-encode-decode
 
-https://husk-.github.io/base64-encode-decode/
+https://lucasflorian.github.io/base64-encode-decode/
 
 A KISS tool to encode / decode base64 text.
 
