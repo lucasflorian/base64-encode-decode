@@ -1,24 +1,36 @@
 $(function() {
-	$('textarea#left').on('keyup', function() {
-		if (this.value.length) {
-			try {
-				$('textarea#right').val(atob(this.value));
-				$('textarea#left').css('color', 'black');
-			} catch (e) {
-				$('textarea#left').css('color', 'red');
-			}
-		} else {
-			$('textarea#right').empty();
+	$('textarea#left').on('paste keyup change', function(event) {
+		if(event.originalEvent.clipboardData){
+			setTimeout(function(){
+				base64Encode();
+			},100);
 		}
+		else {
+			base64Encode();
+		} 
 	});
 
-
-	$('textarea#right').on('keyup', function() {
-		if (this.value.length) {
-			$('textarea#left').val(btoa(this.value));
-				$('textarea#left').css('color', 'black');
-		} else {
-			$('textarea#left').empty();
+	$('textarea#right').on('paste keyup change', function(event) {
+		if(event.originalEvent.clipboardData){
+			setTimeout(function(){
+				$('textarea#left').val(btoa($('textarea#right').val()));
+			},100);
 		}
+		else {
+			$('textarea#left').val(btoa(this.value));
+		} 
+		//base64 is always valid here
+		$('textarea#left').css('color', 'black');
 	});
 });
+
+function base64Encode(){
+	try {
+		$('textarea#right').val(atob($('textarea#left').val()));
+		// valid base64
+		$('textarea#left').css('color', 'black');
+	} catch (e) {
+		// invalid base64
+		$('textarea#left').css('color', 'red');
+	}
+}

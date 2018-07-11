@@ -20,10 +20,14 @@ header p{
 	font-size: 14px;
 }
 
-.github-buttons{
+.header-buttons{
 	position: absolute;
     right: 10px;
     top: 10px;
+}
+
+#tweet-button{
+	margin-bottom:5px;
 }
 
 .container {
@@ -47,6 +51,7 @@ header p{
 	font-size: 50px;
 	font-weight: 700;
 	color: #e6e6e6;
+	z-index: -1;
 }
 
 .left:before {
@@ -61,4 +66,5 @@ header p{
 	height: calc(100% - 20px);
 	width: calc(100% - 20px);
 	margin: 5px;
+    background-color: transparent;
 }
