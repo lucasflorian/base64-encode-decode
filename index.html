@@ -1,40 +1,18 @@
 <!doctype html>
 <html>
 <head>
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-		
-		<style>
-			html,body {
-				width: 100%;
-				height: 100%;
-				margin: 0;
-				padding: 0;
-			}
-			
-			.container {
-				width: 100%;
-				height: 100%;
-				margin: 0;
-				padding: 0;
-			}
-			
-			.half{
-				display: inline-block;
-				width: 50%;
-				height:100%;
-			}
-			
-			.right{
-			}
-			
-			.half textarea{
-				height: calc(100% - 20px);
-				width: calc(100% - 20px);
-				margin: 5px;
-			}
-		</style>
+	<title>Base64 encode / decode</title>
+    <link rel="stylesheet" href="base64-encode-decode.css"></style>
 </head>
 <body>
+	<header>
+		<h1>Base64 encode / decode</h1>
+		<p>Just paste base64 text in the left zone to decode it, or text in the right zone to encode it to base64.</p>
+		<div class="github-buttons">
+			<iframe src="https://ghbtns.com/github-btn.html?user=Husk-&repo=base64-encode-decode&type=star&count=true&size=large" frameborder="0" scrolling="0" width="120px" height="30px"></iframe>
+			<iframe src="https://ghbtns.com/github-btn.html?user=Husk-&repo=base64-encode-decode&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="120px" height="30px"></iframe>
+		</div>
+	</header>
 	<div class="container">
 		<div class="half left">
 			<textarea id="left"></textarea>
@@ -43,6 +21,7 @@
 			<textarea id="right"></textarea>
 		</div>
 	</div>
-	<script src="base64.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="base64-encode-decode.js"></script>
 </body>
 </html>
