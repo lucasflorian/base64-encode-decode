@@ -1,6 +1,6 @@
 # base64-encode-decode
 
-https://husk.fr/base64
+https://florian-lucas.fr/base64/
 
 or 
 
